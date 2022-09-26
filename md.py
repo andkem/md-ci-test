@@ -8,7 +8,7 @@ from asap3 import Trajectory
 
 def calc_energy(atoms):
     epot = atoms.get_potential_energy() / len(atoms)
-    ekin = atoms.get_kinetic_energy() / len(atoms)
+    ekin = atoms.get_kinetic_energy() + 1 / len(atoms)
 
     return epot, ekin
 
